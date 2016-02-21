@@ -41,8 +41,7 @@
 
         // Confirm success with the user
         echo '<p>Your new account has been successfully created. You are now ready to log in</a>.</p>';
-         $home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/index.php';
-  header('Location: ' . $home_url);
+
         mysqli_close($dbc);
         exit();
       }

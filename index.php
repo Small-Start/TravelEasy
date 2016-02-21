@@ -87,7 +87,6 @@
 
      </div>
         <input class="col-md-offset-3 btn btn-primary" type="submit" value="Log In" name="submit" />
-        <input class="col-md-offset-3 btn btn-primary" onclick="signup()" type="button" value="SignUp" name="submit" />
 		
     </fieldset>
 
@@ -114,8 +113,6 @@ $.backstretch([
         fade: 2050,
         duration: 1000
     });
-function signup(){
-  window.location.href="signup.php";
-}
+
 </script>
 </html>
