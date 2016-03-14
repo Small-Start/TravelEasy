@@ -7,6 +7,12 @@
   // Clear the error message
   $error_msg = "";
 
+  //for Sign up button
+  if(isset($_POST['signup']))
+  {
+    header('Location: signup.php');
+  }
+
   // If the user isn't logged in, try to log them in
   if (!isset($_SESSION['username'])) {
     if (isset($_POST['submit'])) {
@@ -87,7 +93,8 @@
 
      </div>
         <input class="col-md-offset-3 btn btn-primary" type="submit" value="Log In" name="submit" />
-		
+        <input class="col-md-offset-3 btn btn-primary" type="submit" value="Sign Up" name="signup" />
+    
     </fieldset>
 
   </div>
@@ -98,7 +105,7 @@
   else {
     // Confirm the successful log-in
     echo('<p class="login">You are logged in as ' . $_SESSION['username'] . '.</p>');
-	$home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/view.php';
+  $home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/view.php';
           header('Location: ' . $home_url);
   }
 ?>
