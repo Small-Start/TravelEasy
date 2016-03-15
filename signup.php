@@ -20,6 +20,10 @@
 </style>
 <?php
   require_once('connectvars.php');
+   if(isset($_POST['login']))
+  {
+    header('Location: index.php');
+  }
 
   // Connect to the database
   $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -42,8 +46,7 @@
         // Confirm success with the user
         echo '<p>Your new account has been successfully created. You are now ready to log in</a>.</p>';
 
-        mysqli_close($dbc);
-        exit();
+      
       }
       else {
        ?>
@@ -61,7 +64,7 @@
 ?>
 
  
-  <form  role="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+  <form  role="form" method="post" action="">
 
     <fieldset>
      <div class="col-md-4 jumbotron col-xs-8 col-xs-offset-2 col-md-offset-4 row">
@@ -81,9 +84,11 @@
       <div class="col-md-offset-3 col-md-6 form-group">
         <label for="password2">Password (retype):</label>
       <input type="password" id="password2" class="form-control" name="password2" /><br />
-        <input type="submit" class="btn btn-primary" value="Sign Up" name="submit" />
+	  </div>
     </div>
-    </div>
+        <input class="col-md-offset-3 btn btn-primary" type="submit" class="btn btn-primary" value="Sign Up" name="submit" />
+		<input class="col-md-offset-3 btn btn-primary" type="submit" value="Log In" name="login" />
+    
 
   </div>
     </fieldset>
