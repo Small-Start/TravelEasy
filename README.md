@@ -1,4 +1,6 @@
 # TravelEasy
+
+[![Join the chat at https://gitter.im/Small-Start/TravelEasy](https://badges.gitter.im/Small-Start/TravelEasy.svg)](https://gitter.im/Small-Start/TravelEasy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 The TravelEasy project is a smart webapp to enhance the travelling experiences of the travellers and guide them in the right direction
 before visiting a place.
 To Contribute:
